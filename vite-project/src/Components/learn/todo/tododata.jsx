@@ -1,10 +1,25 @@
-const tododata =()=>{
-    return (
-          <div className='todo-data'>
-        <div>Learninig React</div>
-        <div>Watching</div>
+const TodoData = (props) => {
+  const { todolist, name } = props;
 
+  console.log("check props", todolist);
+
+  return (
+    <div className="todo-data">
+      {todolist && todolist.map((item, index) => {
+        console.log("check map ", index);
+        return (
+          <div key={index}>
+            {item.name}
+          </div>
+        );
+      })}
+
+      <div>
+        {JSON.stringify(todolist)}
       </div>
-    )
-}
-export default tododata ;
+      <div>My name is {name}</div>
+    </div>
+  );
+};
+
+export default TodoData;
