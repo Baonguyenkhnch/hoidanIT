@@ -1,3 +1,5 @@
+import React from "react";
+
 const TodoData = (props) => {
   const { todoList, deleteTodo, name, age, data } = props;
 

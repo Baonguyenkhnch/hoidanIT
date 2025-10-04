@@ -1,6 +1,6 @@
-import './Components/todo/todo.css';
-import TodoNew from './Components/todo/todonew';
-import TodoData from './Components/todo/tododata';
+import './Components/learn/todo/todo.css';
+import TodoNew from './Components/learn/todo/todonew';
+import TodoData from './Components/learn/todo/tododata';
 import reactLogo from './assets/react.svg';
 import { useState } from 'react';
 
@@ -17,6 +17,11 @@ const App = () => {
     country: "vietnam"
   };
 
+  // Random id
+  const randomIntFromInterval = (min, max) => {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+  };
+
   // Thêm todo
   const addNewtodo = (name) => {
     const newTodo = {
@@ -24,11 +29,6 @@ const App = () => {
       name: name
     };
     setTodoList([...todoList, newTodo]); 
-  };
-
-  // Random id
-  const randomIntFromInterval = (min, max) => {
-    return Math.floor(Math.random() * (max - min + 1) + min);
   };
 
   // Xóa todo
@@ -50,17 +50,13 @@ const App = () => {
         </div>
       )}
 
-      {todoList.length > 0 && (
-        <TodoData todoList={todoList} deleteTodo={deleteTodo} />
-      )}
-
-      {/* Truyền thêm props khác cho demo */}
+      {/* Hiển thị todo list và demo props */}
       <TodoData
+        todoList={todoList}
+        deleteTodo={deleteTodo}
         name={hoidanit}
         age={age}
         data={data}
-        todoList={todoList}
-        deleteTodo={deleteTodo}
       />
     </div>
   );
