@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Products.css';
 
-const ProductsPage = () => {
+const BookPage = () => {
   const [products] = useState([
     { id: 1, name: 'iPhone 15', price: 25000000, image: '📱', category: 'Điện thoại' },
     { id: 2, name: 'MacBook Pro', price: 45000000, image: '💻', category: 'Laptop' },
@@ -92,4 +92,4 @@ const ProductsPage = () => {
   );
 };
 
-export default ProductsPage;
+export default BookPage;
