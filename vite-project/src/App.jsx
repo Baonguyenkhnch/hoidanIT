@@ -5,6 +5,8 @@ import TodoData from './Components/learn/todo/tododata';
 import reactLogo from './assets/react.svg';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Header from './Components/layout/Header';
+import Footer from './Components/layout/Footer';
 
 const App = () => {
   const [todoList, setTodoList] = useState([
@@ -40,6 +42,8 @@ const App = () => {
   };
 
   return (
+    <>
+    <Headers/>
     <div className="todo-container">
       <div className="todo-title">Todo List</div>
       
@@ -69,6 +73,8 @@ const App = () => {
         data={data}
       />
     </div>
+    <Footer/>
+    </>
   );
 };
 
