@@ -1,19 +1,19 @@
 const TodoData = (props) => {
-  const { todolist, name } = props;
-
-  console.log("check props", todolist);
+  const { todoList, deleteTodo, name, age, data } = props;
 
   return (
     <div className="todo-data">
-      {todolist && todolist.map((item, index) => {
-        console.log("check map ", index);
-        return (
-          <div className={`todo-item ${index}`} key={item.id}>
-            <span>{item.name}</span>
-            <button>DELETE</button>
-          </div>
-        );
-      })}
+      {todoList && todoList.map((item, index) => (
+        <div className={`todo-item ${index}`} key={item.id}>
+          <span>{item.name}</span>
+          <button onClick={() => deleteTodo(item.id)}>DELETE</button>
+        </div>
+      ))}
+
+      {/* Demo props khác */}
+      {name && <div>My name is {name}</div>}
+      {age && <div>Age: {age}</div>}
+      {data && <div>Address: {data.address}, {data.country}</div>}
     </div>
   );
 };
