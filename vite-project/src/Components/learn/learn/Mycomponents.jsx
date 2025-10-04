@@ -1,3 +1,4 @@
+import '../learn/style.css';
 const Mycomponent =()=> {
   return (
     <>
