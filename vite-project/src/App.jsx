@@ -13,9 +13,8 @@ const App = () => {
         <button>Add</button>
       </div>
       <div className='todo-data'>
-        <div>Learninig React</div>
-        <div>Watching</div>
-
+        <a href="https://react.dev" target="_blank" rel="noopener noreferrer">Learning React</a>
+        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">Watching</a>
       </div>
 
     </div>
