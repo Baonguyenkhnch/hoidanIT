@@ -4,8 +4,10 @@ import './index.css'
 import App from './App.jsx'
 import LoginPage from './pages/Login.jsx'
 import RegisterPage from './pages/Register.jsx'
-import UserPage from './pages/User.jsx'
 import ProductsPage from './pages/Products.jsx'
+import userPage from './pages/user.jsx'
+import './global.css';
+
 import {
   createBrowserRouter,
   RouterProvider,
@@ -14,7 +16,18 @@ import {
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App/>
+    element: <App/>,
+    children : [
+      {
+    path: "/user",
+    element: <userPage/>
+  },
+  {
+    path: "/products",
+    element: <ProductsPage/>
+  },
+
+    ]
   },
   {
     path: "/login",
@@ -24,14 +37,7 @@ const router = createBrowserRouter([
     path: "/register",
     element: <RegisterPage/>
   },
-  {
-    path: "/user",
-    element: <UserPage/>
-  },
-  {
-    path: "/products",
-    element: <ProductsPage/>
-  },
+  
 ]);
 
 createRoot(document.getElementById('root')).render(

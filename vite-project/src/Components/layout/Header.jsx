@@ -1,16 +1,17 @@
-import './header.css'
-const header = () => {
-    return (
-        <div>
-            <ul>
-                <li><a class="active" href="#home">Home</a></li>
-                <li><a href="#news">News</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#about">About</a></li>
-            </ul>
+import './header.css';
+import { Link } from 'react-router-dom';
 
-        </div>
-    )
-}
+const Header = () => {
+  return (
+    <div>
+      <ul>
+        <li><Link className="active" to="/">Home</Link></li>
+        <li><Link to="/user">User</Link></li>
+        <li><Link to="/product">Product</Link></li>
+        <li><Link to="/about">About</Link></li>
+      </ul>
+    </div>
+  );
+};
 
-export default header
+export default Header;
