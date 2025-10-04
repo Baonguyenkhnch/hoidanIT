@@ -1,8 +1,10 @@
 import './Components/learn/todo/todo.css';
+import './global.css';
 import TodoNew from './Components/learn/todo/todonew';
 import TodoData from './Components/learn/todo/tododata';
 import reactLogo from './assets/react.svg';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const App = () => {
   const [todoList, setTodoList] = useState([
@@ -40,6 +42,14 @@ const App = () => {
   return (
     <div className="todo-container">
       <div className="todo-title">Todo List</div>
+      
+      {/* Navigation Menu */}
+      <div className="nav-links">
+        <Link to="/login">Đăng nhập</Link>
+        <Link to="/register">Đăng ký</Link>
+        <Link to="/user">Tài khoản</Link>
+        <Link to="/products">Sản phẩm</Link>
+      </div>
       
       {/* Component thêm todo */}
       <TodoNew addNewtodo={addNewtodo} />

@@ -1,0 +1,100 @@
+.user-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  padding: 40px 20px;
+}
+
+.user-profile {
+  max-width: 600px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  padding: 40px;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.user-profile h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+  font-size: 2rem;
+}
+
+.profile-avatar {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  margin: 0 auto 15px;
+  color: white;
+}
+
+.user-info {
+  margin-bottom: 30px;
+}
+
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.info-item:last-child {
+  border-bottom: none;
+}
+
+.info-item label {
+  font-weight: 600;
+  color: #555;
+  min-width: 120px;
+}
+
+.info-item span {
+  color: #333;
+  flex: 1;
+  text-align: right;
+}
+
+.info-item input {
+  flex: 1;
+  text-align: right;
+  border: 1px solid #ddd;
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+
+.user-actions {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.edit-btn {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  color: white;
+  padding: 12px 30px;
+  font-size: 16px;
+}
+
+.save-btn {
+  background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+  color: white;
+  padding: 12px 30px;
+  font-size: 16px;
+}
+
+.edit-btn:hover, .save-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
